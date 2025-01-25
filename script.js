@@ -1,4 +1,4 @@
-const baseUrl = 'http://api.weatherapi.com/v1/current.json?key=314ce9363e9340a8af4171015252501&q=';
+const baseUrl = 'API';
 
 document.addEventListener('DOMContentLoaded', () => {
     const locationInput = document.getElementById('location-input');
