@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center py-6">
+    <div class="w-full max-w-lg px-6">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800">Weather App</h1>
+            <p class="text-gray-600">Get real-time weather updates for your city!</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="flex items-center space-x-3 mb-6">
+            <input id="location-input" 
+                   type="text" 
+                   placeholder="Enter city name" 
+                   class="w-full p-4 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+            <button id="search-btn" 
+                    class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition-all">
+                Search
+            </button>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="flex justify-center items-center mb-4">
+            <div class="loader"></div>
+            <span class="ml-2 text-blue-500 font-medium">Fetching weather data...</span>
+        </div>
+
+        <!-- Weather Information Card -->
+        <div class="weather-card p-6 rounded-xl shadow-xl text-center">
+            <h2 id="location" class="text-2xl font-bold mb-4 text-gray-800">Weather Information</h2>
+            <img id="weather-icon" 
+                 src="" 
+                 alt="Weather Icon" 
+                 class="mx-auto mb-4 w-24 h-24 hidden">
+            <div id="weather-info" class="space-y-2">
+                <p id="temperature" class="text-xl text-gray-700">Temperature: --</p>
+                <p id="description" class="text-xl text-gray-700">Condition: --</p>
+                <p id="humidity" class="text-lg text-gray-700">Humidity: --</p>
+                <p id="wind" class="text-lg text-gray-700">Wind Speed: --</p>
+            </div>
+            <div id="extra-info" class="space-y-2 mt-4">
+                <!-- Additional information will be dynamically added -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
